@@ -1,0 +1,29 @@
+# Maintainer: Wiesław Magusiak <w.magusiak@gmail.com>
+pkgname=ssh-email-connect
+pkgver=0.10
+pkgrel=1
+pkgdesc="ssh to email-announced IP."
+arch=('i686' 'x86_64')
+url="http://github.com/wiemag/ssh-email-connect"
+license=('GPL')
+groups=()
+depends=('openssh' 'iproute2' 'curl' 'grep' 'util-linux')
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=(https://github.com/wiemag/ssh-email-connect/archive/v${pkgver}.tar.gz)
+noextract=()
+md5sums=('e74fd2eb646f85dd79b1f8b8956cdfba')
+package() {
+	cd "$srcdir/${pkgname}-$pkgver"
+	install -d -m 755 ${pkgdir}/usr/bin
+	install -m 755 ssh-email-connect.sh ${pkgdir}/usr/bin/ssh-email-connect
+	install -d -m 755 ${pkgdir}/usr/share/man/man1
+	install -D -m 644 ssh-email-connect.man ${pkgdir}/usr/share/man/man1/ssh-email-connect.1
+}

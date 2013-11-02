@@ -1,0 +1,33 @@
+# Wiesław Magusiak <w.magusiak@gmail.com>
+pkgname=sm-c
+pkgver=1.1
+pkgrel=3
+pkgdesc="sendmail connector"
+arch=('i686' 'x86_64')
+url="http://github.com/wiemag/sm-c"
+license=('GPL')
+groups=()
+depends=('bash' 'coreutils' 'procps-ng' 'grep' 'which' 'msmtp')
+#coreutils: 	echo, date
+#procps-ng: 	ps
+#grep: 			grep
+#which: 		which
+#msmtp: 		msmtp
+makedepends=()
+optdepends=()
+provides=('smtp-forwarder')
+conflicts=('msmtp-mta')
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=(https://github.com/wiemag/sm-c/archive/v${pkgver}.tar.gz)
+noextract=()
+md5sums=('2ec6a2ec5e46bf6e5c1cbf59d5ac5a9d')
+package() {
+	install -d -m 755 ${pkgdir}/usr/bin
+	install -m 755 "${srcdir}/${pkgname}-${pkgver}/sm-c.sh" "${pkgdir}/usr/bin/sm-c"
+	cd "${pkgdir}/usr/bin/"
+	ln -s sm-c sendmail
+}

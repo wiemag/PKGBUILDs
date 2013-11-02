@@ -1,10 +1,10 @@
 # Maintainer: Wiesław Magusiak <w.magusiak@gmail.com>
-pkgname=ssh-email-connect
+pkgname=ssh-email-connector
 pkgver=0.10
 pkgrel=1
 pkgdesc="ssh to email-announced IP."
 arch=('i686' 'x86_64')
-url="http://github.com/wiemag/ssh-email-connect"
+url="http://github.com/wiemag/ssh-email-connector"
 license=('GPL')
 groups=()
 depends=('openssh' 'iproute2' 'curl' 'grep' 'util-linux')
@@ -17,13 +17,13 @@ backup=()
 options=()
 install=
 changelog=
-source=(https://github.com/wiemag/ssh-email-connect/archive/v${pkgver}.tar.gz)
+source=(https://github.com/wiemag/ssh-email-connector/archive/v${pkgver}.tar.gz)
 noextract=()
-md5sums=('e74fd2eb646f85dd79b1f8b8956cdfba')
+md5sums=('62b68b47dbe16a9a5c2546f8df8accf6')
 package() {
 	cd "$srcdir/${pkgname}-$pkgver"
 	install -d -m 755 ${pkgdir}/usr/bin
-	install -m 755 ssh-email-connect.sh ${pkgdir}/usr/bin/ssh-email-connect
+	install -m 755 ssh-email-connector.sh ${pkgdir}/usr/bin/ssh-email-connector
 	install -d -m 755 ${pkgdir}/usr/share/man/man1
-	install -D -m 644 ssh-email-connect.man ${pkgdir}/usr/share/man/man1/ssh-email-connect.1
+	install -D -m 644 ssh-email-connector.man ${pkgdir}/usr/share/man/man1/ssh-email-connector.1
 }

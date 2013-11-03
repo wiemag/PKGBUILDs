@@ -1,0 +1,31 @@
+# Maintainer: Wiesław Magusiak <w.magusiak@gmail.com>
+pkgname=boot-notify
+pkgver=0.92
+pkgrel=1
+pkgdesc="E-mail notification of host up/down."
+arch=('i686' 'x86_64')
+url="http://github.com/wiemag/boot-notify"
+license=('GPL')
+groups=()
+depends=('openssh' 'iproute2' 'curl' 'grep' 'util-linux')
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=(https://github.com/wiemag/${pkgname}/archive/v${pkgver}.tar.gz)
+noextract=()
+md5sums=('62b68b47dbe16a9a5c2546f8df8accf6')
+package() {
+	cd "$srcdir/${pkgname}-$pkgver"
+	install -d -m 755 ${pkgdir}/usr/bin
+	install -m 755 bn-*.sh ${pkgdir}/usr/bin/
+	install -d -m 755 ${pkgdir}/etc/systemd/system
+	install -m 755 boot-notify.service ${pkgdir}/etc/systemd/system/boot-notify.service
+	install -d -m 755 ${pkgdir}/usr/share/man/man1
+	install -D -m 644 ssh-email-connector.man ${pkgdir}/usr/share/man/man1/ssh-email-connector.1
+}

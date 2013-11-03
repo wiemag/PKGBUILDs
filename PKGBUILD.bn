@@ -19,7 +19,7 @@ install=
 changelog=
 source=(https://github.com/wiemag/${pkgname}/archive/v${pkgver}.tar.gz)
 noextract=()
-md5sums=('62b68b47dbe16a9a5c2546f8df8accf6')
+md5sums=('b13603fec6c31869c4b7607a057afd00')
 package() {
 	cd "$srcdir/${pkgname}-$pkgver"
 	install -d -m 755 ${pkgdir}/usr/bin

@@ -1,13 +1,13 @@
 # Maintainer: Wiesław Magusiak <w.magusiak@gmail.com>
 pkgname=vidcutmerger
-pkgver=0.14
+pkgver=0.16
 pkgrel=1
 pkgdesc="Cut a video with ffmpeg and merge the clips."
 arch=('i686' 'x86_64')
 url="http://github.com/wiemag/vidcutmerger"
 license=('GPL')
 groups=()
-depends=('bash' 'ffmpeg' 'awk')
+depends=('ffmpeg' 'awk' 'grep' 'bash')
 makedepends=()
 optdepends=()
 provides=()
@@ -20,7 +20,7 @@ changelog=
 source=(https://github.com/wiemag/vidcutmerger/archive/v${pkgver}.tar.gz)
 #source=(/home/wm/git/vidcutmerger/vcm.tar.gz)
 noextract=()
-md5sums=('9186df1288613d1fd24f9fbd0de208b8')
+md5sums=('39ca7b8a27e86b89363fe99841e8b72a')
 package() {
 	cd "$srcdir/${pkgname}-$pkgver"
 	install -d -m 755 ${pkgdir}/usr/bin

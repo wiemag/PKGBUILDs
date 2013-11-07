@@ -3,9 +3,10 @@ Arch Linux PKGBUILDs
 
 Installation PKGBUILDs for Arch Linux:
 
-- PKGBUILD.sm-c:	for sendmail-connector
-- PKGBUILD.vcm:		for vidcutmerger
-- PKGBUILD.s-e-c:	for ssh-email-connect
+- PKGBUILD.sm-c
+- PKGBUILD.ssh-email-connector
+- PKGBUILD.boot-notif
+- PKGBUILD.vidcutmerger
 
 
 USAGE

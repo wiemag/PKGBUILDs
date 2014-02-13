@@ -24,7 +24,7 @@ install=
 changelog=
 source=(https://github.com/wiemag/sm-c/archive/v${pkgver}.tar.gz)
 noextract=()
-md5sums=('2ec6a2ec5e46bf6e5c1cbf59d5ac5a9d')
+md5sums=('0ff1ab1c14d3d6d9b9faa00f374e27c8')
 package() {
 	install -d -m 755 ${pkgdir}/usr/bin
 	install -m 755 "${srcdir}/${pkgname}-${pkgver}/sm-c.sh" "${pkgdir}/usr/bin/sm-c"

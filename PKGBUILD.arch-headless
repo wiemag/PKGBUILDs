@@ -1,7 +1,7 @@
 # Wiesław Magusiak <w.magusiak@gmail.com>
 pkgname=arch-headless
 pkgver=1.10
-pkgrel=1
+pkgrel=0
 pkgdesc="Modify your arch ISO for a headless (and keyboardless) computer."
 arch=('i686' 'x86_64')
 url="http://github.com/wiemag/arch-headless"

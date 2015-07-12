@@ -3,7 +3,7 @@ Arch Linux PKGBUILDs
 
 Installation PKGBUILDs for Arch Linux:
 
-- PKGBUILD.arch-headless
+- PKGBUILD.arch-headless (currently also on AUR)
 - PKGBUILD.sm-c
 - PKGBUILD.ssh-email-connector
 - PKGBUILD.boot-notif
